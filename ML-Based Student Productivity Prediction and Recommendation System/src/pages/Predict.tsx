@@ -74,7 +74,11 @@ export default function Predict() {
     setLoading(true);
 
     try {
-      const response = await fetch("https://ml-based-student-productivity-prediction.onrender.com/predict", {
+      const API_URL = import.meta.env.DEV 
+        ? "http://127.0.0.1:5000/predict" 
+        : "https://ml-based-student-productivity-prediction.onrender.com/predict";
+
+      const response = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
