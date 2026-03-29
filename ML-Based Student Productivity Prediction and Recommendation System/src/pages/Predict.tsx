@@ -74,7 +74,7 @@ export default function Predict() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/predict", {
+      const response = await fetch("https://ml-based-student-productivity-prediction.onrender.com/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
