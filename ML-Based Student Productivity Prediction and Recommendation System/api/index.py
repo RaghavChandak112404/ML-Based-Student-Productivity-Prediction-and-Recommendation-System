@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from predict import predict as run_prediction, load_artifacts
-from recommend import generate_recommendations
+from utils_predict import predict as run_prediction, load_artifacts
+from utils_recommend import generate_recommendations
 
 app = Flask(__name__)
 # Enable CORS for frontend integration
