@@ -51,8 +51,9 @@ def predict(input_data):
                 
     # Apply scaling
     if scaler:
-        num_cols = df_input.select_dtypes(include=['int64', 'float64']).columns.tolist()
-        df_input[num_cols] = scaler.transform(df_input[num_cols])
+        num_cols = ['study_hours', 'screen_time', 'sleep_hours', 'stress_level', 'attendance']
+        if all(col in df_input.columns for col in num_cols):
+            df_input[num_cols] = scaler.transform(df_input[num_cols])
         
     # Predict
     prediction = model.predict(df_input)
