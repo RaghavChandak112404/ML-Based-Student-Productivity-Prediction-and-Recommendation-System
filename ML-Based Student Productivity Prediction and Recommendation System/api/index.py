@@ -14,7 +14,7 @@ try:
 except Exception as e:
     print(f"Error loading artifacts: {e}")
 
-@app.route('/api/predict', methods=['POST'])
+@app.route('/api/predict', methods=['POST', 'OPTIONS'])
 def predict_endpoint():
     try:
         data = request.json
