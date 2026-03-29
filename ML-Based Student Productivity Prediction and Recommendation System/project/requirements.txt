@@ -1,0 +1,8 @@
+pandas
+numpy
+scikit-learn
+xgboost
+flask
+flask-cors
+joblib
+kagglehub[pandas-datasets]
