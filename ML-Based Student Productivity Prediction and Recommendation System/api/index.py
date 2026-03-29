@@ -1,3 +1,11 @@
+import sys
+import os
+
+# Force Vercel to recognize the api directory scope
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir not in sys.path:
+    sys.path.append(current_dir)
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from utils_predict import predict as run_prediction, load_artifacts
