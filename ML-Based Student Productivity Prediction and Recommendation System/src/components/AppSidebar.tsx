@@ -15,8 +15,8 @@ import {
 } from "@/components/ui/sidebar";
 
 const items = [
-  { title: "Dashboard", url: "/", icon: LayoutDashboard },
   { title: "Prediction Tool", url: "/predict", icon: BrainCircuit },
+  { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard },
   { title: "Insights", url: "/insights", icon: BarChart3 },
   { title: "About Project", url: "/about", icon: Info },
 ];
